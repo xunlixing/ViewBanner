@@ -80,6 +80,17 @@ public class MainActivity extends ActionBarActivity {
 			viewBanner.setBannerAdapter(imagePageAdapter);
 			return rootView;
 		}
+		
+		@Override
+		public void onResume() {
+			super.onResume();
+			viewBanner.startAutoScroll();
+		}
+		@Override
+		public void onDestroy() {
+			super.onDestroy();
+			viewBanner.stopAutoScroll();
+		}
 	}
 
 }

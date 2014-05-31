@@ -7,6 +7,7 @@ import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
@@ -44,8 +45,8 @@ public class ImagePageAdapter extends PagerAdapter {
 	}
 
 	@Override
-	public void destroyItem(View container, int position, Object object) {
-		((ViewPager) container).removeView((View) object);
+	public void destroyItem(ViewGroup container, int position, Object object) {
+		container.removeView((View) object);
 	}
 
 	@Override

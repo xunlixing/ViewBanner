@@ -11,6 +11,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -76,7 +77,7 @@ public class BannerView extends RelativeLayout {
 	}
 
 	/**
-	 * stop auto scroll
+	 * onDestory：stop auto scroll
 	 */
 	public void stopAutoScroll() {
 		mHandler.removeMessages(SCROLL_WHAT);
@@ -125,12 +126,13 @@ public class BannerView extends RelativeLayout {
 
 		@Override
 		public void onPageScrollStateChanged(int position) {
-
+			Log.i("bannner", "onPageScrollStateChanged");
+			
 		}
 
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
-
+			Log.i("bannner", "onPageScrolled");
 		}
 
 		@Override
